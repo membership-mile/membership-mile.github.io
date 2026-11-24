@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<style>html{color-scheme:light}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>html{color-scheme:dark}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>BBYO Member Mile</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Hanken+Grotesk:wght@400;500;600;700;900&display=swap">
@@ -13,10 +13,12 @@
   --black:#000000; --white:#ffffff;
   --centennial:#1a03b5; --lox:#e42158; --jaffa:#f8450a; --sunrise:#f8f90a; --pistachio:#6bbd00; --seltzer:#00d7eb;
   --dark-centennial:#0a023c; --light-centennial:#d9e1ff; --light-gray:#e6e6e6; --dark-gray:#666666;
-  --surface:#ffffff; --surface-tint:#d9e1ff; --line:#c9d2f5; --ink:#000000; --ink-muted:#555a6e; --headline:#1a03b5;
-  --action:#1a03b5; --on-action:#ffffff; --band:#1a03b5; --band-ink:#ffffff; --band-muted:#d9e1ff;
-  --tier-paid:#0a023c; --tier-engaged:#e42158; --tier-involved:#1a03b5; --tier-connected:#00d7eb;
-  --up:#2e7d00; --down:#c41a4a;
+  /* Always dark: Dark Centennial page, raised panels in deep blue. */
+  --surface:#0a023c; --surface-tint:#170a63; --line:#2e248a; --ink:#ffffff; --ink-muted:#b9bfe6; --headline:#d9e1ff;
+  --action:#5b4bff; --on-action:#ffffff; --band:#1a03b5; --band-ink:#ffffff; --band-muted:#d9e1ff;
+  --tier-paid:#0a023c; --tier-engaged:#e42158; --tier-involved:#6f61ff; --tier-connected:#00d7eb;
+  --up:#7fd321; --down:#ff6b93;
+  --rule-4:#173d14; --rule-3:#0b3b47; --rule-2:#3d3c0c; --rule-1:#4a1030;
   --font-display:"Gamay Narrow","Archivo","Arial Narrow",sans-serif;
   --font-wide:"Gamay Wide","Archivo",Arial,sans-serif;
   --font-body:"Graphik","Hanken Grotesk",Helvetica,Arial,sans-serif;
@@ -116,7 +118,7 @@ section > header p{margin:0;color:var(--ink-muted);max-width:52ch;font-size:15px
 .side.a{background:var(--lox);color:#fff}
 .side.b{background:var(--centennial);color:#fff}
 .side select{background:#ffffff22;border:2px solid #ffffff88;color:#fff;border-radius:6px;padding:8px 10px;font-weight:600;width:100%}
-.side select option{color:#000}
+.side select option{color:var(--ink);background:var(--surface)}
 .side .bignum{font-family:var(--font-display);font-stretch:75%;font-weight:900;font-size:64px;line-height:.9}
 .side dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:14px}
 .side dd{margin:0;font-weight:700;text-align:right}
@@ -143,10 +145,10 @@ section > header p{margin:0;color:var(--ink-muted);max-width:52ch;font-size:15px
 .rules thead th:first-child{text-align:left}
 .rules tbody th{text-align:left;font-weight:700;color:var(--ink);background:var(--surface)}
 .rules tbody td{text-align:center;background:var(--surface);font-variant-numeric:tabular-nums}
-.rules tbody td:nth-child(2){background:#e7f9dc}
-.rules tbody td:nth-child(3){background:#d6fcff}
-.rules tbody td:nth-child(4){background:#fefed7}
-.rules tbody td:nth-child(5){background:#fbdbe4}
+.rules tbody td:nth-child(2){background:var(--rule-4)}
+.rules tbody td:nth-child(3){background:var(--rule-3)}
+.rules tbody td:nth-child(4){background:var(--rule-2)}
+.rules tbody td:nth-child(5){background:var(--rule-1)}
 .pts{display:inline-flex;flex-wrap:wrap;gap:4px 10px}
 .pts span b{color:var(--ink)}
 .method .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:0}
