@@ -129,7 +129,13 @@ section > header p{margin:0;color:var(--ink-muted);max-width:52ch;font-size:15px
 
 .quiet{display:flex;flex-wrap:wrap;gap:8px}
 .quiet span{border:1px solid var(--line);padding:4px 10px;border-radius:999px;font-size:13px;color:var(--ink-muted)}
-.method{font-size:14px;color:var(--ink-muted);display:grid;gap:8px;max-width:75ch}
+.method{font-size:14px;color:var(--ink-muted);display:grid;gap:10px}
+.method p{max-width:75ch}
+.rulegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:4px 0}
+.rule{background:var(--surface);border-top:4px solid var(--sunrise);padding:12px 14px;display:grid;gap:4px;line-height:1.35}
+.rule b{color:var(--ink);font-size:15px}
+.rule .rfull{color:var(--ink-muted)}
+.rule .rfull strong{color:var(--sunrise);font-weight:700}
 .method p{margin:0}
 .method table{border-collapse:collapse;font-size:13.5px;margin-top:4px}
 .method th,.method td{border:1px solid var(--line);padding:6px 10px;text-align:left}
@@ -210,27 +216,21 @@ section > header p{margin:0;color:var(--ink-muted);max-width:52ch;font-size:15px
       <div class="method" id="howNA">
         <p>Regions are scored on BBYO's chapter health categories. Every category is a percentage of the region's own membership, so a region with 50 members competes fairly with one with 1,000.</p>
         <p>Each category is worth up to <b>25 points</b>, for an involvement score out of <b>100</b>. Regions earn whole points as they move toward the full-points mark.</p>
-        <div class="tblwrap"><table class="rules">
-          <thead><tr><th>Category</th><th>Full 25 points</th><th>How points are earned</th></tr></thead>
-          <tbody>
-            <tr><th>New Members</th><td>40% or more</td><td>1 point for every 1.6%</td></tr>
-            <tr><th>Uninvolved Members</th><td>25% or less</td><td>Lose 1 point for every 3% above 25%</td></tr>
-            <tr><th>Very Involved Teens</th><td>65% or more</td><td>1 point for every 2.6%</td></tr>
-            <tr><th>Core Members</th><td>40% or more</td><td>1 point for every 1.6%</td></tr>
-          </tbody>
-        </table></div>
+        <div class="rulegrid">
+          <div class="rule"><b>New Members</b><span class="rfull">Full 25 pts at <strong>40% or more</strong></span><span>1 point for every 1.6%</span></div>
+          <div class="rule"><b>Uninvolved Members</b><span class="rfull">Full 25 pts at <strong>25% or less</strong></span><span>Lose 1 point for every 3% above 25%</span></div>
+          <div class="rule"><b>Very Involved Teens</b><span class="rfull">Full 25 pts at <strong>65% or more</strong></span><span>1 point for every 2.6%</span></div>
+          <div class="rule"><b>Core Members</b><span class="rfull">Full 25 pts at <strong>40% or more</strong></span><span>1 point for every 1.6%</span></div>
+        </div>
         <p>If two regions have the same score, the region with more members ranks higher.</p>
       </div>
       <div class="method" id="howIntl" hidden>
         <p>International regions are scored on two groups from the international sheet. Every category is a percentage, so a small region competes fairly with a large one.</p>
         <p>Each category is worth up to <b>50 points</b>, for an involvement score out of <b>100</b>. Regions earn whole points as they move toward the full-points mark.</p>
-        <div class="tblwrap"><table class="rules">
-          <thead><tr><th>Category</th><th>Full 50 points</th><th>How points are earned</th></tr></thead>
-          <tbody>
-            <tr><th>Members + Highly Involved</th><td>100%</td><td>1 point for every 2%</td></tr>
-            <tr><th>Involved + Connect</th><td>100%</td><td>1 point for every 2%</td></tr>
-          </tbody>
-        </table></div>
+        <div class="rulegrid">
+          <div class="rule"><b>Members + Highly Involved</b><span class="rfull">Full 50 pts at <strong>100%</strong></span><span>1 point for every 2%</span></div>
+          <div class="rule"><b>Involved + Connect</b><span class="rfull">Full 50 pts at <strong>100%</strong></span><span>1 point for every 2%</span></div>
+        </div>
         <p><b>Members + Highly Involved</b> is the share of the region's total who are paid members (the Members column) or Highly Involved.</p>
         <p><b>Involved + Connect</b> looks at the rest of the region: of the teens who are Involved or Connect, the share who have reached Involved.</p>
         <p>If two regions have the same score, the region with more teens ranks higher.</p>
